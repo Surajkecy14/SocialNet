@@ -17,9 +17,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL, // frontend domain
+  origin: process.env.FRONTEND_URL,
   credentials: true,
-  sameSite: 'None',
 }));
 
 app.use('/user', userRouter);
