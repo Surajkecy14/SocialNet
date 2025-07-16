@@ -51,6 +51,7 @@ router.post("/login", async (req, res) => {
     // Set cookie
     res.cookie("token", token, {
       httpOnly: true,
+      sameSite: "none",
       withCredentials: true,
     });
 
