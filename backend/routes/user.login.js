@@ -44,6 +44,7 @@ router.post("/login", async (req, res) => {
     if (!isSuccess) {
       return res.status(401).json("User not found ❌");
     }
+    console.log(process.env.JWT_SECRET)
 
     // Create JWT token
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
